@@ -1,0 +1,2 @@
+class QaController < ApplicationController
+end
