@@ -1,11 +1,10 @@
 $(document).ready(function() {
 
     $.get("questions.json", function(data) {
-        console.log(data);
         $.each(data, function(index, item) {
 
             var template =
-                    "<div class='question'>" +
+                    "<div class='question' style='display: none'>" +
                             "<h2>{{question}}</h2>" +
                             "<ol class='choices'>" +
                             "{{#choices}}" +
@@ -16,16 +15,20 @@ $(document).ready(function() {
                             "{{/choices}}" +
                             "</ol>" +
                             "</div>";
-            var question = Mustache.to_html(template, item)
+            var question = Mustache.to_html(template, item);
             $("#questions").append(question);
         });
 
-    })
-
-    $("#questions").on("click", ".choices a", function(event) {
-        var choice = event.currentTarget.text;
-        var correctAnswer = $(event.target.parentElement).find(".answer").text()
-        
+        $(".question").first().toggle();
     });
 
+    $("#questions").on("click", ".choices a", function(event) {
+        var choice = $(this).text();
+        var correctAnswer = $(this).next(".answer").text();
+
+        // show congratulations of sorry message
+
+        $(this).parents(".question").toggle();
+        $(this).parents(".question").next().toggle();
+    });
 });
