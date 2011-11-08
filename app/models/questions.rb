@@ -2,12 +2,14 @@ require 'csv'
 
 class Questions
   def initialize
-    CSV.foreach(File.expand_path(File.join("app", "models", "questions.csv"))) do |row|
+    questions_file = File.expand_path(File.join("app", "models", "questions.csv"))
+
+    CSV.foreach(questions_file) do |row|
       @questions ||= []
       @questions << {
           :question => row[1],
           :correct_choice => row[2],
-          :choices => [row[2], row[3], row[4]]
+          :choices => [row[2], row[3], row[4]].sort_by { rand }
       }
     end
   end
