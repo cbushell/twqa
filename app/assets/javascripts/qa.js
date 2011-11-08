@@ -27,8 +27,12 @@ $(document).ready(function() {
         var correctAnswer = $(this).next(".answer").text();
 
         // show congratulations of sorry message
-
-        $(this).parents(".question").toggle();
-        $(this).parents(".question").next().toggle();
+        if(choice == correctAnswer){
+            alert("Right Answer!")
+            $(this).parents(".question").toggle();
+            $(this).parents(".question").next().toggle();
+        } else {
+            alert("Oops, try again")
+        }
     });
 });
