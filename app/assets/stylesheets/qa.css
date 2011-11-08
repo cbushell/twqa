@@ -56,15 +56,19 @@ body {
     border: 0;
 }
 
-.answers {
+.question .answer {
+    display: none;
+}
+
+.choices {
     list-style-type: none;
 }
 
-.answers li {
+.choices li {
     padding-top: 20px;
 }
 
-.answers li a {
+.choices li a {
     width: 738px;
     text-align: center;
 }
