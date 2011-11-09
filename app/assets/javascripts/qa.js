@@ -1,26 +1,33 @@
 $(document).ready(function() {
 
-    $.get("questions.json", function(data) {
-        $.each(data, function(index, item) {
+    function play() {
+        $("#win").hide();
+        $("#loose").hide();
+        $("#questions .question").remove();
 
-            var template =
-                    "<div class='question'>" +
-                            "<h2>{{question}}</h2>" +
-                            "<ol class='choices'>" +
-                            "{{#choices}}" +
-                            "<li>" +
-                            "<a href='#' class='btn large primary'>{{.}}</a>" +
-                            "</li>" +
-                            "{{/choices}}" +
-                            "</ol>" +
-                            "<div class='answer'>{{correct_choice}}</div>" +
-                            "</div>";
-            var question = Mustache.to_html(template, item);
-            $("#questions").append(question);
+        $.get("questions.json", function(data) {
+            $.each(data, function(index, item) {
+
+                var template =
+                        "<div class='question'>" +
+                                "<h2>{{question}}</h2>" +
+                                "<ol class='choices'>" +
+                                "{{#choices}}" +
+                                "<li>" +
+                                "<a href='#' class='btn large primary'>{{.}}</a>" +
+                                "</li>" +
+                                "{{/choices}}" +
+                                "</ol>" +
+                                "<div class='answer'>{{correct_choice}}</div>" +
+                                "</div>";
+
+                var question = Mustache.to_html(template, item);
+                $("#questions").append(question);
+            });
+
+            ask($(".question").first(), 0);
         });
-
-        ask($(".question").first(), 0);
-    });
+    }
 
     function ask(question, score) {
 
@@ -44,10 +51,16 @@ $(document).ready(function() {
     }
 
     function mark(score) {
-        if ($("#questions").length === score) {
+        if ($(".question").length === score) {
             $("#win").toggle();
         } else {
             $("#loose").toggle();
         }
     }
+
+    $(".alert-actions a").on("click", function(event) {
+        play();
+    });
+
+    play();
 });
