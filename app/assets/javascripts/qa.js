@@ -19,20 +19,30 @@ $(document).ready(function() {
             $("#questions").append(question);
         });
 
-        $(".question").first().toggle();
+        ask($(".question").first(), 0);
     });
 
-    $("#questions").on("click", ".choices a", function(event) {
-        var choice = $(this).text();
-        var correctAnswer = $(this).next(".answer").text();
-
-        // show congratulations of sorry message
-        if(choice == correctAnswer){
-            alert("Right Answer!")
-            $(this).parents(".question").toggle();
-            $(this).parents(".question").next().toggle();
-        } else {
-            alert("Oops, try again")
+    function ask(question, score) {
+        if (question.length === 0) {
+            mark(score);
         }
-    });
+
+        question.toggle();
+
+        question.on("click", ".choices a", function(event) {
+            var choice = $(this).text();
+            var correctAnswer = $(this).next(".answer").text();
+
+            if (choice == correctAnswer) {
+                score += 1;
+            }
+
+            $(this).parents(".question").toggle();
+            ask($(this).parents(".question").next(), score);
+        });
+    }
+
+    function mark(score) {
+        console.log("Your score is " + score);
+    }
 });
