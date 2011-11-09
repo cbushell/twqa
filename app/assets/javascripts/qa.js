@@ -4,7 +4,7 @@ $(document).ready(function() {
         $.each(data, function(index, item) {
 
             var template =
-                    "<div class='question' style='display: none'>" +
+                    "<div class='question'>" +
                             "<h2>{{question}}</h2>" +
                             "<ol class='choices'>" +
                             "{{#choices}}" +
@@ -23,6 +23,7 @@ $(document).ready(function() {
     });
 
     function ask(question, score) {
+
         if (question.length === 0) {
             mark(score);
         } else {
@@ -30,10 +31,10 @@ $(document).ready(function() {
         }
 
         question.on("click", ".choices a", function(event) {
-            var choice = $(this).text();
+            var answer = $(this).text();
             var correctAnswer = question.find(".answer").text();
 
-            if (choice == correctAnswer) {
+            if (answer == correctAnswer) {
                 score += 1;
             }
 
@@ -43,6 +44,10 @@ $(document).ready(function() {
     }
 
     function mark(score) {
-        console.log("Your score is " + score);
+        if ($("#questions").length === score) {
+            $("#win").toggle();
+        } else {
+            $("#loose").toggle();
+        }
     }
 });

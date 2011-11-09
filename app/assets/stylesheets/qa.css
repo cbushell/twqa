@@ -56,7 +56,7 @@ body {
     border: 0;
 }
 
-.question .answer {
+#win, #loose, .question, .answer {
     display: none;
 }
 
@@ -72,4 +72,3 @@ body {
     width: 738px;
     text-align: center;
 }
-
