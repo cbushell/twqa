@@ -2,7 +2,7 @@ require 'csv'
 
 class Questions
   def initialize
-    questions_file = File.expand_path(File.join("app", "models", "questions.csv"))
+    questions_file = File.expand_path(File.join("config", "questions.csv"))
 
     CSV.foreach(questions_file) do |row|
       @questions ||= []
