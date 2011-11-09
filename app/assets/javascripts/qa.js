@@ -10,10 +10,10 @@ $(document).ready(function() {
                             "{{#choices}}" +
                             "<li>" +
                             "<a href='#' class='btn large primary'>{{.}}</a>" +
-                            "<div class='answer'>{{correct_choice}}</div>" +
                             "</li>" +
                             "{{/choices}}" +
                             "</ol>" +
+                            "<div class='answer'>{{correct_choice}}</div>" +
                             "</div>";
             var question = Mustache.to_html(template, item);
             $("#questions").append(question);
@@ -25,20 +25,20 @@ $(document).ready(function() {
     function ask(question, score) {
         if (question.length === 0) {
             mark(score);
+        } else {
+            question.toggle();
         }
-
-        question.toggle();
 
         question.on("click", ".choices a", function(event) {
             var choice = $(this).text();
-            var correctAnswer = $(this).next(".answer").text();
+            var correctAnswer = question.find(".answer").text();
 
             if (choice == correctAnswer) {
                 score += 1;
             }
 
-            $(this).parents(".question").toggle();
-            ask($(this).parents(".question").next(), score);
+            question.toggle();
+            ask(question.next(), score);
         });
     }
 
