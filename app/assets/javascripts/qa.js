@@ -30,7 +30,6 @@ $(document).ready(function() {
     }
 
     function ask(question, score) {
-
         if (question.length === 0) {
             mark(score);
         } else {
@@ -38,10 +37,10 @@ $(document).ready(function() {
         }
 
         question.on("click", ".choices a", function(event) {
-            var answer = $(this).text();
+            var chosenAnswer = $(this).text();
             var correctAnswer = question.find(".answer").text();
 
-            if (answer == correctAnswer) {
+            if (chosenAnswer === correctAnswer) {
                 score += 1;
             }
 
@@ -49,7 +48,7 @@ $(document).ready(function() {
             ask(question.next(), score);
         });
     }
-
+  
     function mark(score) {
         if ($(".question").length === score) {
             $("#win").toggle();
