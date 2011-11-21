@@ -34,7 +34,7 @@ namespace :package do
   task :copy_to_public do
     ["images", "javascripts", "stylesheets"].each do |dir|
       FileList["app/assets/#{dir}/*"].each do |source|
-        target = source.sub('app/assets', 'public')
+        target = source.sub("app/assets/#{dir}", 'public/assets')
         cp source, target, :verbose => true
       end
     end
