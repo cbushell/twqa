@@ -1,35 +1,43 @@
 $(document).ready(function() {
 
   var numberOfQuestionsToAsk = 3;
+  var questionsData;
+
+  function loadQuestions(callBack) {
+    $.get("questions.json", function(data) {
+      questionsData = data;
+      callBack();
+    });
+  }
+
+  function renderQuestions(data, num) {
+    $("#questions .question").remove();
+    var toRender = $.shuffle(data).slice(0,num);
+    $.each(toRender, function(index, item) {
+
+      var template =
+              "<div class='question'>" +
+                      "<h2>{{question}}</h2>" +
+                      "<ol class='choices'>" +
+                      "{{#choices}}" +
+                      "<li>" +
+                      "<a href='#' class='btn large primary'>{{.}}</a>" +
+                      "</li>" +
+                      "{{/choices}}" +
+                      "</ol>" +
+                      "<div class='answer'>{{correct_choice}}</div>" +
+                      "</div>";
+
+      var question = Mustache.to_html(template, item);
+      $("#questions").append(question);
+    });
+  }
 
   function play() {
     $("#win").hide();
     $("#loose").hide();
-    $("#questions .question").remove();
-
-    $.get("questions.json", function(data) {
-      $.each(data, function(index, item) {
-
-        var template =
-                "<div class='question'>" +
-                        "<h2>{{question}}</h2>" +
-                        "<ol class='choices'>" +
-                        "{{#choices}}" +
-                        "<li>" +
-                        "<a href='#' class='btn large primary'>{{.}}</a>" +
-                        "</li>" +
-                        "{{/choices}}" +
-                        "</ol>" +
-                        "<div class='answer'>{{correct_choice}}</div>" +
-                        "</div>";
-
-        var question = Mustache.to_html(template, item);
-        $("#questions").append(question);
-      });
-
-      $("#questions").shuffle();
-      ask($(".question").first(), 0, 0);
-    });
+    renderQuestions(questionsData, numberOfQuestionsToAsk);
+    ask($(".question").first(), 0, 0);
   }
 
 
@@ -65,5 +73,5 @@ $(document).ready(function() {
     play();
   });
 
-  play();
+  loadQuestions(play);
 });
