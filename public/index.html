@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html manifest="index.manifest">
+<head>
+  <title>Twqa</title>
+  <link href="/assets/bootstrap.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/assets/qa.css" media="screen" rel="stylesheet" type="text/css" />
+  <script src="/assets/jquery-1.7.js" type="text/javascript"></script>
+  <script src="/assets/shuffle.js" type="text/javascript"></script>
+  <script src="/assets/mustache.js" type="text/javascript"></script>
+  <script src="/assets/qa.js" type="text/javascript"></script>
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+</head>
+<body>
+
+<div class="container">
+  <div class="content">
+    <div class="page-header">
+      <div class="twlogo"></div>
+      <h1>
+        <small>your change to win a Kinde Fire....</small>
+      </h1>
+    </div>
+
+    <div id="questions">
+    </div>
+
+    <div id="win" class="alert-message block-message success">
+      <p>Congratulations! You win!</p>
+      <div class="alert-actions">
+        <a class="btn small" href="#">Play again</a>
+      </div>
+    </div>
+
+    <div id="loose" class="alert-message block-message error">
+      <p>Sorry, you don't win this time!</p>
+      <div class="alert-actions">
+        <a class="btn small" href="#">Play again</a>
+      </div>
+    </div>
+
+  </div>
+  <footer>
+    <p>&copy; ThoughtWorks 2011</p>
+  </footer>
+</div>
+
+</body>
+</html>
