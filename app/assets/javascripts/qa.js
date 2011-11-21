@@ -10,9 +10,10 @@ $(document).ready(function() {
     });
   }
 
-  function renderQuestions(data) {
+  function renderQuestions(data, num) {
     $("#questions .question").remove();
-    $.each(data, function(index, item) {
+    var toRender = $.shuffle(data).slice(0,num);
+    $.each(toRender, function(index, item) {
 
       var template =
               "<div class='question'>" +
@@ -30,13 +31,12 @@ $(document).ready(function() {
       var question = Mustache.to_html(template, item);
       $("#questions").append(question);
     });
-    $("#questions").shuffle();
   }
 
   function play() {
     $("#win").hide();
     $("#loose").hide();
-    renderQuestions(questionsData);
+    renderQuestions(questionsData, numberOfQuestionsToAsk);
     ask($(".question").first(), 0, 0);
   }
 
