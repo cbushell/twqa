@@ -4,3 +4,33 @@ Chris Bushell,ThoughtWorks has offices in how many countries?,8,4,10
 Mary-Anne Cosgrove,Which of these is a prototype-based language?,Io,Haskell,Erlang
 Mary-Anne Cosgrove,Which of these is a pure functional language?,Haskell,Ruby,Scala
 Mary-Anne Cosgrove,Which design pattern would you use if you wanted to construct a complex object?,Builder,Singleton,Abstract Factory
+Scott Robinson,What is the abbreviation for Amazon's column based data store as a service?,SimpleDB,EC2,S3
+Rohit Maurya,Is Thoughtworks a Product company?,No,Yes,,Answer is yes and no
+Rohit Maurya,How many products does Thoughtworks have?,3,2,5
+Andy Marks,Which of the below is not a recognised 'flavour' of Agile?,Rational Unified Process,Crystal Clear,FDD
+Andy Marks,What are the responsibilities of these roles in a stand-up?,"Pigs: talk, chickens: listen","Pigs: listen, chickens: talk","Pigs: Oink, chicken: kokoriko!"
+Andy Marks,How many (a) values and (b) principles are listed at agilemanifesto.org,4 and 12,4 and 11,5 and 10
+Andy Marks,"In order, what are the steps when doing Test Driven Development?",Red/Green/Refactor,Green/Red/Refactor,Red/Refactor/Green
+Andy Marks,Which of the following is not the name for a coding problem set for TW development candidates?,Debt Chasers,Mars Rover,Trains,No-one outside of TW candidates will know this.
+Andy Marks,Which of these speakers have not presented at every Agile Australia conference so far?,Martin Fowler,"Nigel Dalton (Lonely Planet, LunaTractor)",Jeff Smith (Suncorp),"Actually, they have all spoken at each one so far"
+Andy Marks,The majority of the services provided by AWS are best described as:,IaaS,SaaS,PaaS
+Andy Marks,Which of the following is not marketed as a functional programming language?,scala,Clojure,scheme,These are all examples of functional languages.
+Andy Marks,Which of the following is not on the most recent edition of the tech radar?,Delphi,Clojure,Devops
+Andy Marks,The seminal software text colloquially referred to as the 'Gang of Four' is about... ?,Design Patterns,Functional Programming,Scrum
+Andy Marks,Which of the following user groups is not regularly hosted in a ThoughtWorks office in Australia?,AWSUG,Melb.js,Alt.NET
+Andy Marks,"If you overheard a ThoughtWorks developer talking about 'passenger', 'mongrel' and 'bundler', what language do you think they are talking about?",Ruby,Java,C#
+Andy Marks,Where are you most likely to see the 'given... when... then' format appear?,An acceptance test,A user story,A CI dashboard,"You could probably argue that all of these are correct, but the green answer is by far the best one"
+Andy Marks,How would a typical TW dev rank these version control systems in order of preference (most to least)?,Git/CVS/ClearCase ,CVS/ClearCase/Git,ClearCase/CVS/Git
+Andy Marks,Pick the odd one out:,Puppet,Selenium,Concordian
+Liauw Fendy,Smoke tests are,Long running automated tests,Tests to ensure software features are smoke-proof,Torture tests to the point hardware emit 'smokes'
+Liauw Fendy,Failed attempt at refactoring are also called,either one,refuctoring,refactorbating
+Liauw Fendy,"A computer bug that disappears or alters its characteristics when an attempt is made to study it, is also called",Heisenbug,Super bug,Bugzilla
+Liauw Fendy,What language is most closely associated with the actors model of concurrency?,Erlang,Ruby,Java
+Liauw Fendy,Currying is also known as..,schonfinkeling,overriding,overloading
+Alex Ong,What does the EC2 acronym stand for in the Amazon Web Services cloud offering?,Elastic Compute Cloud,Electric Computation 2,Enterprise Cloud Connection
+Rohit Maurya,What is Twist?,Test Automation tool,Platform,Test Management tool
+Silvio Montanari,When is poker planning used?,When estimating a story card,During inception for prioritization of story cards,After a showcase to bet on the next iteration velocity using story cards
+Silvio Montanari,Which one is NOT a Thoughtworks core value?,Protecting our brand,Having fun,Creating a better world
+Rohit Maurya,Is Selenium a Thoughtworks Product?,No,Yes,Maybe,Selenium is an open-source web application testing system also started at ThoughtWorks.
+Rohit Maurya,What is Thoughtworks Studios?,Agile software solutions and training division of ThoughtWorks,Sister Company,Partner Company
+Andy Marks,One of these acronyms is not an approach commonly used by TW teams - which one? ,ODD,ATDD,BDD

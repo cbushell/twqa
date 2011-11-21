@@ -46,12 +46,14 @@ namespace :package do
     layout_file = File.expand_path(File.join("app", "views", "layouts", "offline_application.html.erb"))
     content_file = File.expand_path(File.join("app", "views", "qa", "index.html.erb"))
     offline_file = File.expand_path(File.join("public", "index.html"))
+
     template = ERB.new(File.read(layout_file))
     template.instance_eval do
       def populate
         result(binding)
       end
     end
+
     f = File.open(offline_file, "w")
     f.write(template.populate { File.read(content_file) })
     f.close
