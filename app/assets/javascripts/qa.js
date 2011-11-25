@@ -12,12 +12,13 @@ $(document).ready(function() {
 
   function renderQuestions(data, num) {
     $("#questions .question").remove();
-    var toRender = $.shuffle(data).slice(0,num);
+    var toRender = $.shuffle(data).slice(0, num);
     $.each(toRender, function(index, item) {
 
       var template =
               "<div class='question'>" +
                       "<h2>{{question}}</h2>" +
+                      "<div class='options'>" +
                       "<ol class='choices'>" +
                       "{{#choices}}" +
                       "<li>" +
@@ -25,6 +26,7 @@ $(document).ready(function() {
                       "</li>" +
                       "{{/choices}}" +
                       "</ol>" +
+                      "</div>" +
                       "<div class='answer'>{{correct_choice}}</div>" +
                       "</div>";
 
@@ -35,7 +37,7 @@ $(document).ready(function() {
 
   function play() {
     $("#win").hide();
-    $("#loose").hide();
+    $("#lose").hide();
     renderQuestions(questionsData, numberOfQuestionsToAsk);
     ask($(".question").first(), 0, 0);
   }
@@ -65,7 +67,7 @@ $(document).ready(function() {
     if (score === numberOfQuestionsToAsk) {
       $("#win").toggle();
     } else {
-      $("#loose").toggle();
+      $("#lose").toggle();
     }
   }
 
