@@ -1,11 +1,13 @@
 CACHE MANIFEST
 index.html
 questions.json
-assets/twlogo.jpg
-assets/rails.png
 assets/jquery-1.7.js
 assets/mustache.js
 assets/qa.js
 assets/shuffle.js
-assets/bootstrap.css
 assets/qa.css
+assets/faces.png
+assets/line.png
+assets/line2.png
+assets/message.png
+assets/twlogo.png
