@@ -8,7 +8,7 @@ Scott Robinson,What is the abbreviation for Amazon's AWS column based data store
 Rohit Maurya,Is ThoughtWorks a Product company?,No,Yes,Maybe
 NAT,Is ThoughtWorks Studios a product company?,Yes,No,Maybe
 Rohit Maurya,How many products does ThoughtWorks Studios have?,3,2,5
-Andy Marks,Which of the below is NOT a recognised “flavour” of Agile?,Rational Unified Process,Crystal Clear,FDD
+Andy Marks,"Which of the below is NOT a recognised ""flavour"" of Agile?",Rational Unified Process,Crystal Clear,FDD
 Andy Marks,What are the responsibilities of these roles in a stand-up?,"Pigs talk, chickens listen","Pigs listen, chickens talk","Pigs oink, chicken: kokoriko!"
 Andy Marks,How many (a) values and (b) principles are listed at agilemanifesto.org,4 and 12,4 and 11,5 and 10
 Andy Marks,"In order, what are the steps when doing Test Driven Development?",Red/Green/Refactor,Green/Red/Refactor,Red/Refactor/Green
@@ -17,13 +17,13 @@ Andy Marks,Which of these speakers have NOT presented at every Agile Australia c
 Andy Marks,The majority of the services provided by AWS are best described as:,IaaS,SaaS,PaaS
 Andy Marks,Which of the following is NOT marketed as a functional programming language?,Scala,Clojure,Scheme
 Andy Marks,Which of the following is NOT on the most recent edition of the Tech Radar?,Delphi,Clojure,DevOps
-Andy Marks,"The seminal software text colloquially referred to as the ""Gang of Four” is about?",Design Patterns,Functional Programming,Scrum
+Andy Marks,"The seminal software text colloquially referred to as the ""Gang of Four"" is about?",Design Patterns,Functional Programming,Scrum
 Andy Marks,Which of the following user groups is NOT regularly hosted in a ThoughtWorks office in Australia?,AWSUG,Melb.js,Alt.NET
-Andy Marks,"If you overheard a ThoughtWorks developer talking about “Passenger”, “Mongrel” and “Bundler”, what language do you think they are talking about?",Ruby,Java,C#
-Andy Marks,Where are you most likely to see the “Given… When… Then” format appear?,An acceptance test,A user story,A CI dashboard,"You could probably argue that all of these are correct, but the green answer is by far the best one"
+Andy Marks,"If you overheard a ThoughtWorks developer talking about ""Passenger"", ""Mongrel"" and ""Bundler"", what language do you think they are talking about?",Ruby,Java,C#
+Andy Marks,"Where are you most likely to see the ""Given.... When.... Then...."" format appear?",An acceptance test,A user story,A CI dashboard,"You could probably argue that all of these are correct, but the green answer is by far the best one"
 Andy Marks,How would a typical ThoughtWorks dev rank these version control systems in order of preference (most to least)?,Git/CVS/ClearCase ,CVS/ClearCase/Git,ClearCase/CVS/Git
 Andy Marks,Pick the odd one out:,Puppet,Selenium,Concordian
-Andy Marks,One of these acronyms is NOT an approach commonly used by ThoughtWorks teams – which one? ,ODD,ATDD,BDD
+Andy Marks,One of these acronyms is NOT an approach commonly used by ThoughtWorks teams - which one? ,ODD,ATDD,BDD
 Rohit Maurya,Is Selenium a ThoughtWorks Product?,No,Yes,Maybe,Selenium is an open-source web application testing system also started at ThoughtWorks. 
 Rohit Maurya,What is ThoughtWorks Studios?,Agile software solutions and training division of ThoughtWorks,Sister Company,Partner Company
 Rohit Maurya,What is Twist?,Test Automation tool,Platform,Test Management tool
@@ -32,7 +32,6 @@ Silvio Montanari,Which one is NOT a ThoughtWorks core value?,Protecting our bran
 Liauw Fendy,Failed attempts at refactoring are also called?,Refuctoring or Refactorbating,Refuctoring,Refactorbating
 Liauw Fendy,"A computer bug that disappears or alters its characteristics when an attempt is made to study it, is also called?",Heisenbug,Super bug,Bugzilla
 Liauw Fendy,What language is most closely associated with the actors model of concurrency?,Erlang,Ruby,Java
-Liauw Fendy,Currying is also known as?,Schönfinkeling,Overriding,Overloading
 Alex Ong,What does the EC2 acronym stand for in the Amazon Web Services cloud offering?,Elastic Compute Cloud,Electric Computation 2,Enterprise Cloud Connection
 ,Who wrote the first code compiler?,Grace Hopper,Ada Lovelace,Kay McNulty
 ,In which decade was Ruby invented?,90's,80's,00's
