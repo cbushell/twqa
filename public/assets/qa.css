@@ -92,7 +92,6 @@ div.options {
 .btn:hover {
   background-position: 0 -15px;
   color: #000;
-  text-decoration: none;
 }
 .btn:focus {
   outline: 1px dotted #666;
@@ -122,6 +121,3 @@ footer {
 	background: #000 url("line2.png") top center no-repeat;
 	padding: 5px 40px;
 }
-
-
-
