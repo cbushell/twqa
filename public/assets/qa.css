@@ -92,7 +92,7 @@ div.options {
 .btn:hover {
   background-position: 0 -15px;
   color: #000;
-  text-decoration: underline;
+  text-decoration: none;
 }
 .btn:focus {
   outline: 1px dotted #666;
@@ -101,7 +101,7 @@ div.options {
 .choices {
   list-style-type: none;
   margin: 0;
-padding: 0;
+  padding: 0;
 }
 
 .choices li {
@@ -111,6 +111,11 @@ padding: 0;
 .choices li a {
   width: 300px;
   text-align: center;
+  text-decoration: none;
+}
+
+.choices li a:hover {
+  text-decoration: none;
 }
 
 footer {
